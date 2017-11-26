@@ -109,3 +109,20 @@ jQuery(document).ready(function ($) {
 
     //End
 });
+
+
+function nextsale() {
+    ga('send', {
+        hitType: 'event',
+        eventCategory: 'Aanbiedingen',
+        eventAction: 'images'
+    });
+}
+
+function portfolieimg(name) {
+    ga('send', {
+        hitType: 'event',
+        eventCategory: 'Portfolio',
+        eventAction: 'portfolio_' + name
+    });
+}
