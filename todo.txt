@@ -1,10 +1,8 @@
-swipen van aanbiedngen
-
-foto about me te groot op ipad
+swipen van aanbiedngen = pijlltjes beter
 
 facebook pagina 
 
-instagram account
+// instagram account
 
 pinterest account + bord
 
