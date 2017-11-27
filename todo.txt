@@ -1,9 +1,4 @@
-fotos moeten veel kleiner
- -> knoppen vanboven werken niet op ipad
-
-google analytics
-
-aanbieding op ipad verkeerd
+swipen van aanbiedngen
 
 foto about me te groot op ipad
 
