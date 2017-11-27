@@ -41,13 +41,14 @@
     margin-right: 30px;
 }
 .galleria-theme-classic .galleria-thumbnails .galleria-image {
-    height: 40px;
-    width: 60px;
-    background: #000;
-    margin: 0 5px 0 0;
-    border: 1px solid #000;
-    float: left;
-    cursor: pointer;
+	width: 11px;
+	height: 11px;
+	margin: 0 4px;
+	position: relative;
+	border-radius: 100%;
+    display: inline-block;
+    float: right;
+	background-color: rgba(0, 0, 0, 0.6);
 }
 .galleria-theme-classic .galleria-counter {
     position: absolute;

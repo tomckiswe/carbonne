@@ -17,7 +17,7 @@
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	<!--        <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">-->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-	<script src="src/galleria.js"></script>
+	<script src="galleria/galleria-1.5.7.min.js"></script>
 
 	<!--For Plugins external css-->
 	<link rel="stylesheet" href="assets/css/plugins.css" />
@@ -32,14 +32,6 @@
 
 	<!--Theme Responsive css-->
 	<link rel="stylesheet" href="assets/css/responsive.css" />
-
-	<style>
-            #galleria{
-                width:100%;
-                height:450px;
-                margin:20px auto 0 auto;
-            }
-        </style>
 
 	<script>
 		(function (i, s, o, g, r, a, m) {
@@ -152,7 +144,7 @@
 					    
 						<div class="col-md-5">
 								<center><h3>Aanbieding</h3></center>
-								<div id="galleria">
+								<div class="galleria">
 									<img src="assets/images/sales/1.jpg">
 									<img src="assets/images/sales/2.jpg">
 									<img src="assets/images/sales/3.jpg">
@@ -447,15 +439,6 @@
 	<script src="assets/js/main.js"></script>
 	<script src="assets/js/slideshow.js"></script>
 	<script async defer src="//assets.pinterest.com/js/pinit.js"></script>
-
-	<script>
-			
-			// Load theme
-			Galleria.loadTheme('src/themes/dots/galleria.dots.js');
-			
-			$('#galleria').galleria();
-			
-			</script>
 </body>
 
 </html>

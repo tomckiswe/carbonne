@@ -110,13 +110,16 @@ jQuery(document).ready(function ($) {
     //End
 });
 
-/*(function() { 
-    //Galleria.loadTheme('galleria/themes/dots/galleria.classic.min.js');
-    //Galleria.run('.galleria');
-    Galleria.loadTheme('galleria/themes/dots/galleria.dots.js');
+(function() { 
+    Galleria.loadTheme('galleria/themes/classic/galleria.classic.min.js');
+    Galleria.configure({
+        thumbnails: "empty"
+    });
+    Galleria.run('.galleria');
+    /*Galleria.loadTheme('galleria/themes/dots/galleria.dots.js');
     
-    $('#galleria').galleria();
-}());*/
+    $('#galleria').galleria();*/
+}());
 
 
 function nextsale() {
