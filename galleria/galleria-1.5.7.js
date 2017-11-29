@@ -1740,7 +1740,7 @@ Galleria = function() {
                     if( test.protocol != loc.protocol ||
                         test.hostname != loc.hostname ||
                         test.port != loc.port ) {
-                            Galleria.raise('Parent fullscreen not available. Iframe protocol, domains and ports must match.');
+                            // Galleria.raise('Parent fullscreen not available. Iframe protocol, domains and ports must match.');
                             return false;
                         }
 
