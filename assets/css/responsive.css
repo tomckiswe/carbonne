@@ -26,7 +26,7 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
     line-height: 30px;
 	}
 	.about-content {
-    text-align: center;
+    text-align: justify;
 	}
 
 }
@@ -40,7 +40,7 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 	}
 	
 	.about-content {
-    text-align: center;
+    text-align: justify;
 	}
 	.portfolio-item {
     width: 45%;

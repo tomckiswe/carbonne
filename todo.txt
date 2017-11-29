@@ -1,8 +1,15 @@
-swipen van aanbiedngen = pijlltjes beter
+menu clickable
 
-facebook pagina 
+favicon.ico
+
+gallery fullscreen
+
+mail in page
 
 // instagram account
 
+
+-- Caroline
 pinterest account + bord
+facebook pagina 
 

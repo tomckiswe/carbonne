@@ -113,7 +113,10 @@ jQuery(document).ready(function ($) {
 (function() { 
     Galleria.loadTheme('galleria/themes/classic/galleria.classic.min.js');
     Galleria.configure({
-        thumbnails: "empty"
+        thumbnails: "empty",
+        showCounter: false,
+        autoplay: 7000,
+        fullscreenDoubleTap: true
     });
     Galleria.run('.galleria');
     /*Galleria.loadTheme('galleria/themes/dots/galleria.dots.js');
