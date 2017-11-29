@@ -171,3 +171,27 @@ $("#portfoliobutton").click(function() {
         scrollTop: $("#portfolio").offset().top + offset
     }, speed);
 });
+
+var buttons = ['aanbieding', 'about', 'portfolio', 'contact']
+/*var buttonoffset = []
+for (var index in buttons) {
+    var button = $("#" + buttons[index] + "button")
+    
+    if(window.pageYOffset > button.offset().top) {
+        button.focus()
+    }
+}*/
+
+$(window).on('scroll', function() {
+    var y_scroll_pos = parseInt(window.pageYOffset);
+
+    for (var index in buttons) {
+        var button = $("#" + buttons[index] + "button")
+        var section = $("#" + buttons[index])
+        console.log('>> ' + y_scroll_pos + ' > ' + parseInt(section.offset().top))
+        if(y_scroll_pos> parseInt(section.offset().top)) {
+            // button.focus()
+            button.hover()
+        }
+    }
+});
