@@ -140,3 +140,34 @@ function portfolieimg(name) {
         eventAction: 'portfolio_' + name
     });
 }
+
+var offset = -10; //Offset of 20px
+var speed = 1000;
+
+$("#contactbutton").click(function() {
+    
+    $('html, body').animate({
+        scrollTop: $("#contact").offset().top + offset
+    }, speed);
+});
+
+$("#aanbiedingbutton").click(function() {
+
+    $('html, body').animate({
+        scrollTop: $("#aanbieding").offset().top + offset
+    }, speed);
+});
+
+$("#aboutbutton").click(function() {
+
+    $('html, body').animate({
+        scrollTop: $("#about").offset().top + offset
+    }, speed);
+});
+
+$("#portfoliobutton").click(function() {
+
+    $('html, body').animate({
+        scrollTop: $("#portfolio").offset().top + offset
+    }, speed);
+});
