@@ -183,14 +183,13 @@ for (var index in buttons) {
 }*/
 
 $(window).on('scroll', function() {
-    var y_scroll_pos = parseInt(window.pageYOffset);
+    var y_scroll_pos = parseInt(window.pageYOffset) + (window.innerHeight/2);
 
     for (var index in buttons) {
         var button = $("#" + buttons[index] + "button")
         var section = $("#" + buttons[index])
-        console.log('>> ' + y_scroll_pos + ' > ' + parseInt(section.offset().top))
-        if(y_scroll_pos> parseInt(section.offset().top)) {
-            // button.focus()
+        if(y_scroll_pos > parseInt(section.offset().top)) {
+            button.focus()
             button.hover()
         }
     }

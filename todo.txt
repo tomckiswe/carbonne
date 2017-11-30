@@ -1,15 +1,11 @@
 menu clickable
 
-favicon.ico
-
-gallery fullscreen
-
 mail in page
 
-// instagram account
+
 
 
 -- Caroline
 pinterest account + bord
 facebook pagina 
-
+// instagram account
