@@ -50,7 +50,7 @@
 		ga('create', 'UA-110221687-1', 'auto');
 		ga('send', 'pageview');
 	</script>
-
+	<script src="assets/js/mail.js"></script>
 
 	<script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
@@ -63,6 +63,25 @@
 	<div class='preloader'>
 		<div class='loaded'>&nbsp;</div>
 	</div>
+
+	<div id="modal" class="modal">
+			
+			  <!-- Modal content -->
+			  <div class="modal-content">
+				<span class="close">&times;</span>
+				<table width=100%>
+					<tr>
+						<td width=30%>
+							<img src="assets/images/send.png" id="modalimg" style="height: 60px">
+						</td>
+						<td>
+							<p id=modaltext>Text</p>
+						</td>
+					</tr>
+				</table>
+			  </div>
+			
+			</div>
 
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
@@ -82,13 +101,13 @@
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right">
 					<li class="active">
-						<a href="#aanbieding"  id="aanbiedingbutton">Aanbieding</a>
+						<a href="#aanbieding" id="aanbiedingbutton">Aanbieding</a>
 					</li>
 					<li>
-						<a href="#about"  id="aboutbutton">Over mij</a>
+						<a href="#about" id="aboutbutton">Over mij</a>
 					</li>
 					<li>
-						<a href="#portfolio"  id="portfoliobutton">Sfeerbeelden</a>
+						<a href="#portfolio" id="portfoliobutton">Sfeerbeelden</a>
 					</li>
 					<li>
 						<a href="#contact" id="contactbutton">Contact</a>
@@ -168,7 +187,7 @@
 							<p>
 								<font size=large>Kostprijs: 65 euro</font>
 							</p>
-							<p>Bestellen: caroline@carbonne.be</p>
+							<p>Bestellen: <a id="contactbuttonaanbieding"  href="#contact">caroline@carbonne.be</a></p>
 						</div>
 					</div>
 
@@ -333,36 +352,40 @@
 
 						<div class="contact-category">
 							<div class="mail">
-								<h4>Mail :</h4>
-								<h2>caroline@carbonne.be</h2>
+								<h4>Mail me:</h4>
+								<form>
+									<table width=100% border=0>
+									  <tr>
+										<td align="left">Aan:</td>
+										<td align="left">caroline@carbonne.be</td>
+									  </tr>
+									  <tr>
+										<td align="left">
+										  Van:
+										</td>
+										<td align="left">
+										  <input type="email" id="email" class="borders" style="border-style: groove" placeholder="uw email adres">
+										</td>
+									  </tr>
+									  <tr>
+										  <td align="left">Bericht:</td>
+										  <td></td>
+									  </tr>
+									  </table>
+									  
+									  <textarea id="message" class="borders mailmessage" placeholder="Schrijf je bericht hier ..."></textarea>
+									  <br>
+									  <input type="button" value="Verzenden" onclick="sendMail()">
+								  </form>
 							</div>
 						</div>
-
-						<!--<div class="contact-category">
-								<div class="phone">
-									<h4>Phone :</h4>
-									<h5>00 11 22 33 44 55 66</h5>
-								</div>
-							</div>-->
+						<br><br>
 						<p style="text-transform: none; line-height: 1.7em">Volg me om op de hoogte te blijven van nieuwe aanbiedingen:</p>
 						<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fcarbonne.be&tabs=timeline&width=350&height=300&small_header=true&adapt_container_width=false&hide_cover=false&show_facepile=true&appId"
 						    width="350" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
 
-							<a data-pin-do="embedBoard" data-pin-lang="nl" data-pin-board-width="330" data-pin-scale-height="190" data-pin-scale-width="80" href="https://www.pinterest.com/carbonne_be/carbonne/"></a>
-						<!--<div class="contact-category">
-							<div class="social">
-								<a href="#">
-									<i class="fa fa-facebook"></i>
-								</a>
-								<a href="#">
-									<i class="fa fa-pinterest"></i>
-								</a>
-								<a href="#">
-									<i class="fa fa-instagram"></i>
-								</a>
-							</div>
-						</div> -->
-
+						<a data-pin-do="embedBoard" data-pin-lang="nl" data-pin-board-width="330" data-pin-scale-height="190" data-pin-scale-width="80"
+						    href="https://www.pinterest.com/carbonne_be/carbonne/"></a>
 					</div>
 				</div>
 			</div>
@@ -393,7 +416,7 @@
 	<script async defer src="//assets.pinterest.com/js/pinit.js"></script>
 	<script src="assets/js/slideshow.js"></script>
 	<script src="assets/js/main.js"></script>
-	
+
 
 </body>
 
