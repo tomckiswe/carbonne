@@ -3,10 +3,10 @@
 
 jQuery(document).ready(function ($) {
 
-	$(window).load(function () {
-		$(".loaded").fadeOut();
+    $(window).load(function () {
+        $(".loaded").fadeOut();
         $(".preloader").delay(1000).fadeOut("slow");
-	});
+    });
     /*---------------------------------------------*
      * Mobile menu
      ---------------------------------------------*/
@@ -25,9 +25,9 @@ jQuery(document).ready(function ($) {
             }
         }
     });
-	
-	
-	/*---------------------------------------------*
+
+
+    /*---------------------------------------------*
      * Portfolio Pop Up Animation
      ---------------------------------------------*/
 
@@ -37,36 +37,36 @@ jQuery(document).ready(function ($) {
             enabled: true
         }
     });
-	
-	/*---------------------------------------------*
+
+    /*---------------------------------------------*
      * Menu Background Change
      ---------------------------------------------*/
-	
-	var windowWidth = $(window).width();
+
+    var windowWidth = $(window).width();
     if (windowWidth > 757) {
 
-        
-          
-            $(window).scroll(function () {
-                if ($(this).scrollTop() > 500) {
-                    $('.navbar').fadeIn(500);
-                    $('.navbar').addClass('menu-bg');
 
-                } else {
-                    
-                    $('.navbar').removeClass('menu-bg');
-                }
-            });
-        
+
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 500) {
+                $('.navbar').fadeIn(500);
+                $('.navbar').addClass('menu-bg');
+
+            } else {
+
+                $('.navbar').removeClass('menu-bg');
+            }
+        });
+
     }
-	$('#bs-example-navbar-collapse-1').localScroll();
+    $('#bs-example-navbar-collapse-1').localScroll();
 
 
     /*---------------------------------------------*
      * STICKY scroll
      ---------------------------------------------*/
 
-		$.localScroll();
+    $.localScroll();
 
 
 
@@ -74,10 +74,10 @@ jQuery(document).ready(function ($) {
      * Counter 
      ---------------------------------------------*/
 
-//    $('.statistic-counter').counterUp({
-//        delay: 10,
-//        time: 2000
-//    });
+    //    $('.statistic-counter').counterUp({
+    //        delay: 10,
+    //        time: 2000
+    //    });
 
 
 
@@ -86,31 +86,31 @@ jQuery(document).ready(function ($) {
      * WOW
      ---------------------------------------------*/
 
-//        var wow = new WOW({
-//            mobile: false // trigger animations on mobile devices (default is true)
-//        });
-//        wow.init();
+    //        var wow = new WOW({
+    //            mobile: false // trigger animations on mobile devices (default is true)
+    //        });
+    //        wow.init();
 
 
     /* ---------------------------------------------------------------------
      Carousel
      ---------------------------------------------------------------------= */
 
-//    $('.testimonials').owlCarousel({
-//        responsiveClass: true,
-//        autoplay: false,
-//        items: 1,
-//        loop: true,
-//        dots: true,
-//        autoplayHoverPause: true
-//
-//    });
+    //    $('.testimonials').owlCarousel({
+    //        responsiveClass: true,
+    //        autoplay: false,
+    //        items: 1,
+    //        loop: true,
+    //        dots: true,
+    //        autoplayHoverPause: true
+    //
+    //    });
 
 
     //End
 });
 
-(function() { 
+(function () {
     Galleria.loadTheme('galleria/themes/classic/galleria.classic.min.js');
     Galleria.configure({
         thumbnails: "empty",
@@ -144,28 +144,28 @@ function portfolieimg(name) {
 var offset = -10; //Offset of 20px
 var speed = 1000;
 
-$("#contactbutton").click(function() {
-    
+$("#contactbutton").click(function () {
+
     $('html, body').animate({
         scrollTop: $("#contact").offset().top + offset
     }, speed);
 });
 
-$("#aanbiedingbutton").click(function() {
+$("#aanbiedingbutton").click(function () {
 
     $('html, body').animate({
         scrollTop: $("#aanbieding").offset().top + offset
     }, speed);
 });
 
-$("#aboutbutton").click(function() {
+$("#aboutbutton").click(function () {
 
     $('html, body').animate({
         scrollTop: $("#about").offset().top + offset
     }, speed);
 });
 
-$("#portfoliobutton").click(function() {
+$("#portfoliobutton").click(function () {
 
     $('html, body').animate({
         scrollTop: $("#portfolio").offset().top + offset
@@ -182,13 +182,13 @@ for (var index in buttons) {
     }
 }*/
 
-$(window).on('scroll', function() {
-    var y_scroll_pos = parseInt(window.pageYOffset) + (window.innerHeight/2);
+$(window).on('scroll', function () {
+    var y_scroll_pos = parseInt(window.pageYOffset) + (window.innerHeight / 2);
 
     for (var index in buttons) {
         var button = $("#" + buttons[index] + "button")
         var section = $("#" + buttons[index])
-        if(y_scroll_pos > parseInt(section.offset().top)) {
+        if (y_scroll_pos > parseInt(section.offset().top)) {
             button.focus()
             button.hover()
         }
