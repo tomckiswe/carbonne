@@ -50,6 +50,25 @@
 		ga('create', 'UA-110221687-1', 'auto');
 		ga('send', 'pageview');
 	</script>
+	<script>
+		function sendMail() {
+			message = encodeURIComponent($("#message").val())
+			email = encodeURIComponent($("#email").val())
+			var params = 'message=' + message + '&emailaddress=' + email
+			$.ajax({
+				dataType: 'json',
+				url: 'https://script.google.com/macros/s/AKfycbzGWdqAgo-9ASx0Ye7m8vxVQtJG89S0_NUq3E5ATn36-byqOcQ/exec?' + params,
+				success: function () {
+					alert('Bedankt voor je bericht')
+					$("#message").val('')
+					$("#email").val('')
+				},
+				error: function (error, textStatus, errorThrown) {
+
+				}
+			});
+		}
+	</script>
 
 
 	<script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
@@ -82,13 +101,13 @@
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right">
 					<li class="active">
-						<a href="#aanbieding"  id="aanbiedingbutton">Aanbieding</a>
+						<a href="#aanbieding" id="aanbiedingbutton">Aanbieding</a>
 					</li>
 					<li>
-						<a href="#about"  id="aboutbutton">Over mij</a>
+						<a href="#about" id="aboutbutton">Over mij</a>
 					</li>
 					<li>
-						<a href="#portfolio"  id="portfoliobutton">Sfeerbeelden</a>
+						<a href="#portfolio" id="portfoliobutton">Sfeerbeelden</a>
 					</li>
 					<li>
 						<a href="#contact" id="contactbutton">Contact</a>
@@ -333,8 +352,33 @@
 
 						<div class="contact-category">
 							<div class="mail">
-								<h4>Mail :</h4>
-								<h2>caroline@carbonne.be</h2>
+								<h4>Mail me:</h4>
+								<form>
+									<table width=100% border=0>
+									  <tr>
+										<td align="left">Aan:</td>
+										<td align="left">caroline@carbonne.be</td>
+									  </tr>
+									  <tr>
+										<td align="left">
+										  Van:
+										</td>
+										<td align="left">
+										  <input type="email" id="email">
+										</td>
+									  </tr>
+									  <tr>
+										  <td align="left">Bericht:</td>
+										  <td></td>
+									  </tr>
+									  </table>
+									  
+									  <textarea id="message" style="width: 100%; height: 100px">
+								  
+									  </textarea>
+									  <br>
+									  <input type="button" value="Stuur" onclick="sendMail()"><br>
+								  </form>
 							</div>
 						</div>
 
@@ -348,7 +392,8 @@
 						<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fcarbonne.be&tabs=timeline&width=350&height=300&small_header=true&adapt_container_width=false&hide_cover=false&show_facepile=true&appId"
 						    width="350" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
 
-							<a data-pin-do="embedBoard" data-pin-lang="nl" data-pin-board-width="330" data-pin-scale-height="190" data-pin-scale-width="80" href="https://www.pinterest.com/carbonne_be/carbonne/"></a>
+						<a data-pin-do="embedBoard" data-pin-lang="nl" data-pin-board-width="330" data-pin-scale-height="190" data-pin-scale-width="80"
+						    href="https://www.pinterest.com/carbonne_be/carbonne/"></a>
 						<!--<div class="contact-category">
 							<div class="social">
 								<a href="#">
@@ -393,7 +438,7 @@
 	<script async defer src="//assets.pinterest.com/js/pinit.js"></script>
 	<script src="assets/js/slideshow.js"></script>
 	<script src="assets/js/main.js"></script>
-	
+
 
 </body>
 
