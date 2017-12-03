@@ -151,6 +151,13 @@ $("#contactbutton").click(function () {
     }, speed);
 });
 
+$("#contactbuttonaanbieding").click(function () {
+    
+        $('html, body').animate({
+            scrollTop: $("#contact").offset().top + offset
+        }, speed);
+    });
+
 $("#aanbiedingbutton").click(function () {
 
     $('html, body').animate({
