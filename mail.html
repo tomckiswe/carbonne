@@ -1,0 +1,39 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script>
+
+function sendMail() {
+    message = encodeURIComponent($("#message").val())
+    email = encodeURIComponent($("#email").val())
+    var params = 'message=' + message + '&emailaddress=' + email
+    $.ajax({
+    dataType: 'json',
+    url: 'https://script.google.com/macros/s/AKfycbzGWdqAgo-9ASx0Ye7m8vxVQtJG89S0_NUq3E5ATn36-byqOcQ/exec?' + params,
+    success: function() { alert('success')},
+    error: function(error, textStatus, errorThrown) {
+      alert('fail')
+    }});
+   }
+</script>
+
+<form>
+  <table>
+    <tr>
+      <td>Aan:</td>
+      <td>caroline@carbonne.be</td>
+    </tr>
+    <tr>
+      <td>
+        Van:
+      </td>
+      <td>
+        <input type="email" id="email">
+      </td>
+    </tr>
+    </table>
+    Bericht:<br>
+    <textarea id="message">
+
+    </textarea>
+    <br>
+    <input type="button" value="Stuur" onclick="sendMail()">
+</form>
