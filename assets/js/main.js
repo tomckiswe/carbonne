@@ -110,7 +110,7 @@ jQuery(document).ready(function ($) {
     //End
 });
 
-(function () {
+/*(function () {
     Galleria.loadTheme('galleria/themes/classic/galleria.classic.min.js');
     Galleria.configure({
         thumbnails: "empty",
@@ -119,10 +119,7 @@ jQuery(document).ready(function ($) {
         fullscreenDoubleTap: true
     });
     Galleria.run('.galleria');
-    /*Galleria.loadTheme('galleria/themes/dots/galleria.dots.js');
-    
-    $('#galleria').galleria();*/
-}());
+}());*/
 
 
 function nextsale() {
