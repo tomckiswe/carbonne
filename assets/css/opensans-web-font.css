@@ -48,17 +48,6 @@
 }
 
 @font-face {
-    font-family: 'Honeymoon';
-    src: url('../fonts/Red Velvet - Demo.ttf');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-
-
-@font-face {
     font-family: 'open_sansregular';
     src: url('../fonts/opensans-regular.eot');
     src: url('../fonts/opensans-regular.eot?#iefix') format('embedded-opentype'),

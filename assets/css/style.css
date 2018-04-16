@@ -170,8 +170,8 @@ h6 {
     margin-bottom: .9rem;
 }
 p {
-    line-height: 1.5rem;
-    font-size: 1.5em;
+    #line-height: 1.5rem;
+    #font-size: 1.5em;
 }
 p:last-child {
     margin-bottom: 0px;
@@ -498,15 +498,30 @@ textarea::-ms-input-placeholder
 
 /* For Home Section */
 
-.home{
-  background: url(../images/carbonne/header.jpg) no-repeat center center;
-  background-size: cover;
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
-  -o-background-size: cover;
-  width: 100%;
-  overflow: hidden;
+@media only screen and (min-width: 601px) {
+    .home{
+        background: url(../images/carbonne/header.jpg) no-repeat center center;
+        background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        -o-background-size: cover;
+        width: 100%;
+        overflow: hidden;
+    }
 }
+
+@media only screen and (max-width: 600px) {
+    .home {
+        background: url(../images/carbonne/header_mobile.jpg) no-repeat center center;
+        background-size: contain;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        -o-background-size: cover;
+        width: 100%;
+        overflow: hidden;
+    }
+}
+
 .home-details{
 	margin-top:150px;
 	color:#f1f1f1;
@@ -686,3 +701,20 @@ textarea::-ms-input-placeholder
     cursor: pointer;
 }
 
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+@media only screen and (min-width: 601px) {
+    .meimage {
+        width: 30%;  
+        float: left; 
+        margin: 0px 15px 0px 15px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .meimage {
+        width: 100%
+    }
+}
